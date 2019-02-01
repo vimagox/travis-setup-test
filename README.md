@@ -1,6 +1,6 @@
 travis setup test
 -------------------
-External contributor experiment to figure out how travis deals
+External contributor setup to figure out how travis deals
 with encrypted environment variables
 
 
