@@ -1,0 +1,15 @@
+{
+  extends: "airbnb",
+  plugins: [ "jest" ],
+  env: {
+    jest: true,
+    node: true,
+    browser: false,
+    es6: true,
+    builtin: true
+  },
+  rules: {
+    func-names: ["error", "never"],
+    no-console: [0, "never"],
+  }
+}
