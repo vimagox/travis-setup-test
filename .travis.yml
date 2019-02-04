@@ -16,8 +16,16 @@ before_script:
     - echo "${BUILD_SERVER}"
     - |
       if [[ -z $UPLOAD_URL ]]; then
+        echo "one"
+        echo "two"
+        echo "three"
+        curl http://google.com
         BUILD_SERVER=$PUBLIC_UPLOAD_URL/builds
       else
+        echo "one"
+        echo "two"
+        echo "four"
+        curl http://google.com
         BUILD_SERVER=$UPLOAD_URL/builds
       fi
       echo ">>>>${BUILD_SERVER}"
