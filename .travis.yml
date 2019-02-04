@@ -13,12 +13,12 @@ env:
 script:
   - |
     if [[ -z "$UPLOAD_URL" ]]; then
-      echo ">>>>>> public upload >>>>>>>>>>>>>>>>>>>>>>"
+      echo "\n\n>>>>>> public upload >>>>>>>>>>>>>>>>>>>>>>"
     else
-      echo ">>>>>> private upload >>>>>>>>>>>>>>>>>>>>>"
+      echo "\n\n>>>>>> private upload >>>>>>>>>>>>>>>>>>>>>"
     fi
     if [[ -z "$DOWNLOAD_URL" ]]; then
-      echo ">>>>> public download >>>>>>>>>>>>>>>>>>>>>"
+      echo ">>>>> public download >>>>>>>>>>>>>>>>>>>>>\n\n"
     else
-      echo ">>>>> private download >>>>>>>>>>>>>>>>>>>>"
+      echo ">>>>> private download >>>>>>>>>>>>>>>>>>>>\n\n"
     fi
