@@ -10,6 +10,18 @@ env:
     - PUBLIC_DOWNLOAD_URL=some-public-download-url
     - secure: bQ8b+GycfvFjJ6cMKZKW2iuOQJvf90EB+tpbg4zz+8j1wV4veW9zEq5OTU5P5MMUadMXjFDoVdCvd61QWcSgwvVMo1ftIhTCBLj0ryou2KPB7FfTlMMzP0HNZ+FT534brORtWG5MNKXLCCrHVHDZGmZm/+1qd1V1lLY+gyeqPMA2D/aDvC8PDD67Nj4JqaOyy6d34QhotJw2WMXeP8dmOQ8LE3uPT80Vazv7sodWfI9YJY2loH9C2Ul9VIJaYZj4+p37Q7ajjgXE2IHZgloGUNpIbWZws2W+3zwFGj+c5Y7E+ZX6WrU+Y7Mu1UFcry5Ppd7QjBqXNzNpVhlahQh4PPMIib7SSjGEmStWspUgn3c9fo6hnwU+ebNYKlhPweC+SNJ5TRft2bTqQYtFbGSiF9Bfd9qpiBPT/Q2CFVO8tysbGUCCx8VO+GVVtyEN2I6gLsbtLaAlQN8r+xuMWp/YtuyLbEgQIguSfyykDT8YTe4W8fNCd5XZMdmnh3NTY/IzS7vJGKL7pliiQP04+IQij+L6TYKJEDtXdPds4h75OvNAcIw9qSBaNA890OV8Wftn+dwuylgspyepCF8Z4ov3ofLkAP+SMB82MxywUcfKRxchKrP01AFpRVnN+FWph/YVqoRCdfOH0kdj0+yBEreD79UwRmw+s1F3dgFlS480R8c=
 
+before_script:
+    - echo "BUILD_SERVER=${UPLOAD_URL}/builds"
+    - BUILD_SERVER=$UPLOAD_URL/builds
+    - echo "${BUILD_SERVER}"
+    - |
+      if [[ -z $UPLOAD_URL ]]; then
+        BUILD_SERVER=$PUBLIC_UPLOAD_URL/builds
+      else
+        BUILD_SERVER=$UPLOAD_URL/builds
+      fi
+      echo ">>>>${BUILD_SERVER}"
+
 script:
   - |
     if [[ -z "$UPLOAD_URL" ]]; then
