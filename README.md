@@ -3,7 +3,6 @@ travis setup test
 External contributor setup to figure out how travis deals
 with encrypted environment variables
 
-
 ## Setup
 
 ```
